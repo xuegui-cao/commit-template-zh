@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>commit-template-idea-plugin</id>
+    <name>Git Commit Template</name>
+    <version>1.2.1+zh.1</version>
+
+    <vendor url="https://github.com/MobileTribe/commit-template-idea-plugin">Damien Arrachequesne (upstream) / bilingual repack by this repository</vendor>
+
+    <description><![CDATA[
+        <p>中英双语版 (Bilingual EN/zh) — 界面提示保留英文原文并追加中文翻译。See README.zh-CN.md in the distribution JAR for details.</p>
+        <p>Create a commit message with the following template:</p>
+
+        <pre>
+        &lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+        &lt;BLANK LINE&gt;
+        &lt;body&gt;
+        &lt;BLANK LINE&gt;
+        &lt;footer&gt;
+        </pre>
+    ]]></description>
+
+    <idea-version since-build="145.0"/>
+
+    <depends>com.intellij.modules.vcs</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="Commit.Button" class="com.leroymerlin.commit.CreateCommitAction"
+                text="Create commit message (创建提交信息)"
+                description="Create commit message (创建提交信息)"
+                icon="/icons/load.png">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>

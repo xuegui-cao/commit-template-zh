@@ -1,0 +1,31 @@
+NOTICE
+======
+
+This package contains modified versions of software distributed under the
+Apache License 2.0:
+
+  Upstream project : Git Commit Template (commit-template-idea-plugin) v1.2.1
+  Upstream source  : https://github.com/MobileTribe/commit-template-idea-plugin
+                     (master @ e07bcba4bc1d4a9c513fa89262e59f9de0f8c8ab)
+  Copyright        : (c) Damien Arrachequesne / Leroy Merlin France, and
+                     the upstream contributors. All rights reserved.
+  License          : Apache-2.0 (unchanged, see LICENSE)
+
+Modifications made in this repository (Apache-2.0 section 4(b) declaration):
+
+  1. 25 UI string constants localized to a bilingual "English (Chinese)"
+     format via class constant-pool rewriting (no recompilation):
+     - META-INF/plugin.xml: commit-panel action text/description
+     - CommitDialog: dialog title, OK button
+     - CommitPanel: form labels, tooltips, and 11 commit-type radio captions
+  2. plugin.xml version suffixed to 1.2.1+zh.1; bilingual description note added.
+  3. Reference sources in annex (src/, tests/) patched with the same strings.
+
+Base binary used for rebuilding (kept in tools/upstream/, provenance = the
+pre-patched 1.2.1 distribution JAR this fork originated from):
+  SHA-256: b2f9965c50b01a79987db65fa556b091a052424bf1948eac69a3cabf443f41a7
+
+Deliberately NOT localized (functionality-preserving):
+  - lowercase type names feat/fix/... (commit template syntax + parser back-fill)
+  - template markers "BREAKING CHANGE:" and "Closes"
+  - ChangeType enum fields (never shown in the UI)
