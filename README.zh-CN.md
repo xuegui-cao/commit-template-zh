@@ -4,6 +4,17 @@ IntelliJ 插件 **Git Commit Template**（id: `commit-template-idea-plugin`）�
 所有界面提示保留英文原文并以 `English (中文翻译)` 格式追加中文，共 25 处。
 未做任何功能改动，插件逻辑与上游完全一致。
 
+## 为什么做这个项目
+
+原插件已经很成熟，但它默认面向熟悉 Conventional Commits 的开发者。实际工作中，
+**很多新入行的程序员对各提交类型（feat / fix / docs / style / refactor / perf / test /
+build / ci / chore / revert）的具体含义并不熟悉**，界面上那些长串的英文类型说明经常
+看不懂、错选类型，导致提交信息不规范、code review 时返工。
+
+本项目正是为此而来：**在保留英文原文的前提下，为每条类型说明追加中文翻译**，
+让对 Conventional Commits 陌生的同事（尤其是英语不熟悉的同学）也能一眼读懂
+"这个类型适合哪种改动"，从源头减少错选类型、乱写提交信息的情况。
+
 ## 安装
 
 1. 从 [Releases](../../releases) 下载 `commit-template-zh-1.2.1.jar`
